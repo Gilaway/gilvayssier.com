@@ -1,8 +1,40 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Avenir Next", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+/*--------------------NAVBAR--------------------*/
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 12px 24px 12px 24px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  gap: 65px
+}
+
+.navbar li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar a {
+  text-decoration: none;
+  text-align: center;
+  color: #7D858C;
+  justify-content: space-between;
+}
+
+.navbar a:hover {
+  color: black;
 }
