@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 16px "Avenir Next", Helvetica, Arial, sans-serif;
+  font: 16px "Avenir Next", sans-serif;
 }
 
 a {
@@ -51,6 +51,7 @@ a {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+  gap: 4rem;
 }
 
 h1 {
@@ -58,12 +59,63 @@ h1 {
   font-weight: 600;
 }
 
+.intro-txt {
+  /*max-width: 550px;*/
+  color: #7D858C;
+  font-family: Avenir, sans-serif;
+  margin-bottom: 35px;
+}
+
 .button {
-  background-color: #CDCDCD;
+  background-color: #F0F0F0;
   border: none;
-  opacity: 0.5;
   border-radius: 100px;
   padding: 5px 12px;
   margin-right: 15px;
+  font-family: Avenir, sans-serif;
+}
 
+.button:hover {
+  background-color: #D1D1D1;
+}
+
+h2 {
+  font-size: 1.275rem;
+  font-weight: 500;
+}
+
+.latest-blog p {
+  color: #7D858C;
+  font-family: Avenir, sans-serif;
+}
+
+.project-carousel {
+  display: flex;
+  gap: 50px;
+}
+
+.project-1 {
+  min-width: 18rem;
+}
+
+.project-img {
+  border: 1px solid #F0F0F0;
+  height: 10rem;
+  background-color: #F0F0F0;
+  border-radius: 10px;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-date {
+  min-width: 7rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
