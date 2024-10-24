@@ -1,25 +1,51 @@
 <%- include("partials/header") -%>
 <%- include("partials/navbar") -%>
 
-    <h1>About</h1>
-    <p>A glimpse into me.</p>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>Hi, I'm Gil, born in France, raised in the French Alps and working in Switzerland. I have been coding since
-        I am 16.</p>
-    </section>
-    <section id="connect">
-        <h2>Connect</h2>
-        <ul>
-            <li>Instagram</li>
-            <li>GitHub</li>
-            <li>LinkedIn</li>
-        </ul>
-    </section>
-    <section id="work">
-        <h2>Work</h2>
-    </section>
+<div class="about-body">
+    <div class="about-intro">
+        <h1>About</h1>
+        <p>A peek into my world.</p>
+    </div>
+    <div class="about-sections">
+        <section id="about" class="about">
+            <h2 class="section-title">About</h2>
+            <div class="about-txt">
+                <p>
+                    Hi, I'm Gil, born in France, raised in the French Alps and now working in Switzerland as a
+                    Service Desk Analyst. With a passion for coding since , I also enjoy working on UI/UX design and
+                    server administration, always looking for ways to enhance user experiences and optimize systems.
+                </p>
+                <p>
+                    In addition to my work in tech, I have a strong passion for finance,
+                    constantly learning about markets and investments.
+                </p>
+                <p>
+                    When I’m not at my desk or coding, you’ll find me exploring the mountains in any season,
+                    spending time with friends, enjoying great restaurants, or cheering on a hockey game at
+                    the rink. Whether it’s embracing nature, socializing, or catching the thrill of sports,
+                    I’m always seeking new experiences.
+                </p>
+            </div>
+        </section>
+        <section id="connect" class="connect">
+            <h2 class="section-title">Connect</h2>
+            <div class="connect-list">
+                <ul>
+                    <li class="one"><button>Email</button></li>
+                    <li class="two"><button>Instagram</button></li>
+                    <li class="three"><button>GitHub</button></li>
+                    <li class="four"><button>LinkedIn</button></li>
+                </ul>
+            </div>
+        </section>
+        <section id="work">
+            <h2 class="section-title">Work</h2>
+        </section>
+    </div>
+</div>
+
+
 
 <%- include("partials/footer") -%>
 
