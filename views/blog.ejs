@@ -26,6 +26,14 @@
     }
 </code></pre>
     </div>
+    <div class="articles_list">
+        <% articles.forEach(article => { %>
+        <div class="article">
+            <h3><%= article.article_date%></h3>
+            <h3><%= article.titre %></h3>
+        </div>
+        <% }); %>
+    </div>
 </div>
 
 
