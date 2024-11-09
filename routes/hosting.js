@@ -2,22 +2,18 @@ var express = require('express');
 var router = express.Router();
 const db = require('../config/db_config.js');
 
-
-/* GET about page. */
 router.get('/', function(req, res, next) {
-  const query = 'SELECT * FROM articles';
+  const query = 'SELECT * FROM articles WHERE slug = "hosting"';
   db.query(query, function(err, results) {
     if (err) {
       console.log('Impossible to retreive data : ', err);
       return res.status(500).send('Server Error');
     }
-    res.render('blog', {
+    res.render('hosting', {
     title: 'Blog | Gil Vayssier',
     articles: results
     });
   });
 });
-
-router.use('/hosting', require('./hosting'));
 
 module.exports = router;

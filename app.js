@@ -11,7 +11,8 @@ var aboutRouter = require('./routes/about');
 var blogRouter = require('./routes/blog');
 var craftRouter = require('./routes/craft');
 var gearRouter = require('./routes/gear');
-var usersRouter = require('./routes/users');
+var hostingRouter = require('./routes/hosting');
+// var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -30,7 +31,8 @@ app.use('/about', aboutRouter);
 app.use('/blog', blogRouter);
 app.use('/craft', craftRouter)
 app.use('/gear', gearRouter);
-app.use('/users', usersRouter);
+app.use('/hosting', hostingRouter);
+// app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
