@@ -1,32 +1,15 @@
 <%- include("partials/header") -%>
 <%- include("partials/navbar") -%>
 
+<div class="hosting-body">
+    <div class="hosting-img">
+        <img src="/images/hosting.webp" alt="Node-pic">
+    </div>
+    <% articles.forEach(article => { %>
+        <h1><%= article.titre %></h1>
+        <p><%- article.article %></p>
+    <% }); %>
 
-<% articles.forEach(article => { %>
-<h1><%= article.titre %></h1>
-<% }); %>
-<h2>Test</h2>
-<div class="code-test">
-        <pre><code class="language-css">
-    body {
-        background-color: #f3f3f3;
-        font-family: Arial, sans-serif;
-    }
-
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        padding: 20px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .container h1 {
-        color: #333;
-        font-size: 2rem;
-    }
-</code></pre>
 </div>
 
 <%- include("partials/footer") -%>

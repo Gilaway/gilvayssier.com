@@ -4,18 +4,22 @@
 <div class="blog-body">
     <h1>Blog</h1>
     <p>Here will be my blog where I will be posting some articles!</p>
-
-    </div>
-    <div class="articles_list">
+    <div class="blog-list">
         <% articles.forEach(article => { %>
-        <div class="article">
-            <a href="./blog/<%=article.slug%>">
-                <h3><%= article.article_date%></h3>
-                <h3><%= article.titre %></h3>
-            </a>
-        </div>
+            <div class="article">
+                    <a href="/blog/<%=article.slug%>" class="article-link">
+                        <div class="blog-date">
+                            <p><%=article.article_date%></p>
+                        </div>
+                        <div class="blog-title-home">
+                            <p><%=article.titre%></p>
+                        </div>
+                    </a>
+                </div>
         <% }); %>
     </div>
+</div>
+
 
 
 <%- include("partials/footer") -%>

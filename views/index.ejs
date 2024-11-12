@@ -4,7 +4,8 @@
 <div class="homepage-body">
     <div class="intro">
         <h1>hey, Gil here!</h1>
-        <p class="intro-txt">I am software developer who loves to learn new things such as technologies, programming languages, etc.
+        <p class="intro-txt">I am software developer who loves to learn new things such as technologies, programming
+            languages, etc.
             I mainly focus on coding, tech and productivity.</p>
         <button class="button"><a href="https://github.com/Gilaway">GitHub</a></button>
         <button class="button"><a href="https://www.linkedin.com/in/gil-vayssier-1b4872116/">LinkedIn</a></button>
@@ -13,18 +14,25 @@
     <div class="projects">
         <h2>My projects</h2>
         <div class="project-carousel">
-            <div class="project-1">
-                <div class="project-img">
+
+            <a href="/blog/hosting" class="project-list">
+                <div class="project-1">
+                    <div class="project-img">
+                        <img src="/images/hosting.webp" alt="nodeserver">
+                    </div>
+                    <h3>Node.js on RHEL 9</h3>
+                    <p>The tutorial to set up a Node.js web application hosted on a Red Hat Enterprise Linux 9.</p>
+
                 </div>
-                <h3>Project 1</h3>
-                <p>Here will be the 1st project I made.</p>
-            </div>
-            <div class="project-2">
-                <div class="project-img">
+            </a>
+            <a href="/blog" class="project-list">
+                <div class="project-2">
+                    <div class="project-img">
+                    </div>
+                    <h3>Project 2</h3>
+                    <p>Here will be the "2nd" project I made.</p>
                 </div>
-                <h3>Project 2</h3>
-                <p>Here will be the "2nd" project I made.</p>
-            </div>
+            </a>
         </div>
     </div>
 
@@ -33,22 +41,18 @@
         <p>I sometimes write about programming, tech and productivity. Check me out !
         </p>
         <div class="blog-list">
+            <% articles.forEach(article => { %>
             <div class="article">
-                <div class="blog-date">
-                    <p>Oct 18, 2024</p>
-                </div>
-                <div>
-                    <p>My latest blog article will be here.</p>
-                </div>
+                <a href="/blog/<%= article.slug %>" class="article-link">
+                    <div class="blog-date">
+                        <p><%= article.article_date %></p>
+                    </div>
+                    <div class="blog-title-home">
+                        <p><%= article.titre %></p>
+                    </div>
+                </a>
             </div>
-            <div class="article">
-                <div class="blog-date">
-                    <p>Aug 5, 2024</p>
-                </div>
-                <div>
-                    <p>Another article will be placed here.</p>
-                </div>
-            </div>
+            <% }); %>
         </div>
     </div>
 

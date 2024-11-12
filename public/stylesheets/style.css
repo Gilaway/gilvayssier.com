@@ -94,9 +94,19 @@ h2 {
   gap: 50px;
 }
 
-.project-1 {
-  min-width: 18rem;
+.project-carousel:hover .project-list{
+  opacity: 0.5;
 }
+
+.project-1 {
+  width: 18rem;
+}
+
+.project-carousel:hover .project-list:hover{
+  opacity: 1;
+}
+
+
 
 .project-img {
   border: 1px solid #F0F0F0;
@@ -105,13 +115,14 @@ h2 {
   border-radius: 10px;
 }
 
+.project-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .blog-list {
   display: flex;
   flex-direction: column;
-}
-
-.blog-date {
-  min-width: 7rem;
 }
 
 .article {
@@ -119,6 +130,25 @@ h2 {
   flex-direction: row;
   gap: 30px;
 }
+
+.article-link {
+  color: black;
+  transition: color 0.3s;
+}
+
+.blog-list:hover .article-link {
+  opacity: 0.5;
+}
+
+.blog-list:hover .article-link:hover {
+  opacity: 1;
+}
+
+.blog-date {
+  min-width: 7rem;
+}
+
+
 
 /*--------------------ABOUT--------------------*/
 
@@ -292,19 +322,36 @@ h2 {
   margin-right: auto;
 }
 
-.code-test {
-  background-color: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 15px;
+.article a{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
 }
 
-pre {
-  padding: 0;
-  background-color: white;
+/*--------------------HOSTING--------------------*/
+
+.hosting-body {
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  padding: 64px 24px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.hosting-img img{
+  max-width: 100%;
+  border-radius: 15px;
 }
 
 pre code {
   font-size: 13px;
   font-family:  "JetBrains Mono", monospace;
   font-weight: 200;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
 }
