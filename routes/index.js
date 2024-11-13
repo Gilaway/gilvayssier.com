@@ -4,7 +4,7 @@ const db = require('../config/db_config.js');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    const query = 'SELECT * FROM articles ORDER BY id DESC';
+    const query = 'SELECT * FROM articles ORDER BY date_data DESC';
     db.query(query, function (err, results) {
         if (err) {
             console.log('Impossible to retreive data : ', err);
