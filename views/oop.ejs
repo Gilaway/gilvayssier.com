@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+<%- include("partials/navbar") -%>
+
+<div class="oop-body">
+    <div class="oop-img">
+        <img src="/images/oop.webp" alt="oop-pic">
+    </div>
+    <% articles.forEach(article => { %>
+        <h1><%= article.titre %></h1>
+        <p><%-article.article %></p>
+    <% }); %>
+</div>
+
+<%- include("partials/footer") -%>

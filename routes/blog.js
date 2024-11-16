@@ -19,5 +19,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.use('/hosting', require('./hosting'));
+router.use('/oop', require('./oop'));
 
 module.exports = router;

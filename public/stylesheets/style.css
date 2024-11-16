@@ -102,11 +102,13 @@ h2 {
   width: 18rem;
 }
 
+.project-2 {
+  width: 18rem;
+}
+
 .project-carousel:hover .project-list:hover{
   opacity: 1;
 }
-
-
 
 .project-img {
   border: 1px solid #F0F0F0;
@@ -340,8 +342,6 @@ h2 {
   margin-right: auto;
 }
 
-
-
 .hosting-img img{
   max-width: 100%;
   border-radius: 15px;
@@ -354,4 +354,45 @@ pre code {
   background-color: white;
   border: 1px solid #e5e7eb;
   border-radius: 15px;
+}
+
+/*--------------------OOP--------------------*/
+
+.oop-body {
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  padding: 64px 24px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.oop-img img{
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+pre code {
+  font-size: 13px;
+  font-family:  "JetBrains Mono", monospace;
+  font-weight: 200;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+}
+
+code {
+  font-size: 13px;
+  font-family:  "JetBrains Mono", monospace;
+  font-weight: 200;
+  /*color: dimgrey;*/
+  background-color: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.bold {
+  font-weight: bolder;
 }
