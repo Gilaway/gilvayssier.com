@@ -8,7 +8,6 @@ require('dotenv').config();
 var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
 var blogRouter = require('./routes/blog');
-var craftRouter = require('./routes/craft');
 var gearRouter = require('./routes/gear');
 var hostingRouter = require('./routes/hosting');
 var oopRouter = require('./routes/oop');
@@ -29,7 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/blog', blogRouter);
-app.use('/craft', craftRouter)
 app.use('/gear', gearRouter);
 app.use('/hosting', hostingRouter);
 app.use('/oop',oopRouter);
