@@ -1,9 +1,16 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const https = require('https')
+const fs = require('fs')
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 require('dotenv').config();
+
+const options = {
+  key: fs.readFileSync('/etc/ssl/gilvayssier.com/www.gilvayssier.com_private_key.key'),
+  cert: fs.readFileSync('/etc/ssl/gilvayssier.com/www.gilvayssier.com_ssl_certificate.cer')
+};
 
 var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
@@ -11,7 +18,6 @@ var blogRouter = require('./routes/blog');
 var gearRouter = require('./routes/gear');
 var hostingRouter = require('./routes/hosting');
 var oopRouter = require('./routes/oop');
-// var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -51,8 +57,16 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-const port = process.env.PORT || 3000;
+const port = 443; // Use HTTPS
+https.createServer(options, app).listen(port, function() {
+  console.log('Serveur HTTPS démarré sur le port : ' + port);
+});
 
-app.listen(port, function() {
-  console.log('Express server listening on port: ' + port);
-})
+//HTTP Redirection to HTTPS
+const http = require('http');
+http.createServer(function(req, res) {
+  res.writeHead(301, { Location: 'https://' + req.headers.host + req.url });
+  res.end();
+}).listen(80, function() {
+  console.log('Redirection HTTP vers HTTPS activée sur le port 80');
+});
