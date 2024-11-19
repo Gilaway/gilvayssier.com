@@ -36,8 +36,7 @@ app.use('/about', aboutRouter);
 app.use('/blog', blogRouter);
 app.use('/gear', gearRouter);
 app.use('/hosting', hostingRouter);
-app.use('/oop',oopRouter);
-// app.use('/users', usersRouter);
+app.use('/oop',oopRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

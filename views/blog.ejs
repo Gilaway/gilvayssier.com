@@ -6,17 +6,19 @@
     <p>Here will be my blog where I will be posting some articles!</p>
     <div class="blog-list">
         <% articles.forEach(article => { %>
-            <div class="article">
-                    <a href="/blog/<%=article.slug%>" class="article-link">
+                <div class="article">
+                    <!-- Check if article.slug is "newarticle" -->
+                    <a href="<%= article.slug === 'newarticle' ? '/blog' : '/blog/' + article.slug %>"
+                       class="article-link">
                         <div class="blog-date">
-                            <p><%=article.article_date%></p>
+                            <p><%= article.article_date %></p>
                         </div>
                         <div class="blog-title-home">
-                            <p><%=article.titre%></p>
+                            <p><%= article.titre %></p>
                         </div>
                     </a>
                 </div>
-        <% }); %>
+            <% }); %>
     </div>
 </div>
 

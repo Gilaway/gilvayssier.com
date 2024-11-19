@@ -14,7 +14,6 @@
     <div class="projects">
         <h2>My projects</h2>
         <div class="project-carousel">
-
             <a href="/blog/hosting" class="project-list">
                 <div class="project-1">
                     <div class="project-img">
@@ -22,7 +21,6 @@
                     </div>
                     <h3>Node.js on RHEL 9</h3>
                     <p>The tutorial to set up a Node.js web application hosted on a Red Hat Enterprise Linux 9.</p>
-
                 </div>
             </a>
             <a href="/blog" class="project-list">
@@ -43,16 +41,18 @@
         </p>
         <div class="blog-list">
             <% articles.forEach(article => { %>
-            <div class="article">
-                <a href="/blog/<%= article.slug %>" class="article-link">
-                    <div class="blog-date">
-                        <p><%= article.article_date %></p>
-                    </div>
-                    <div class="blog-title-home">
-                        <p><%= article.titre %></p>
-                    </div>
-                </a>
-            </div>
+                <div class="article">
+                    <!-- Check if article.slug is "newarticle" -->
+                    <a href="<%= article.slug === 'newarticle' ? '/blog' : '/blog/' + article.slug %>"
+                       class="article-link">
+                        <div class="blog-date">
+                            <p><%= article.article_date %></p>
+                        </div>
+                        <div class="blog-title-home">
+                            <p><%= article.titre %></p>
+                        </div>
+                    </a>
+                </div>
             <% }); %>
         </div>
     </div>
