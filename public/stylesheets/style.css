@@ -15,6 +15,7 @@ p {
 @media screen and (max-width: 500px) {
     body {
         padding: 0;
+        margin: 0;
     }
 }
 
@@ -52,6 +53,15 @@ p {
 }
 
 @media screen and (max-width: 500px){
+    .navbar {
+        position: fixed;
+        background: white;
+        margin: 0 auto;
+        width : 100%;
+        padding : 12px 0 0 0;
+        z-index: 10;
+    }
+
     .navbar ul {
         gap: 30px;
     }
@@ -375,10 +385,63 @@ h2 {
     justify-self: center;
     flex-direction: row;
     gap: 10px;
+    color: black;
 }
 
 .b1, .b2, .b3, .b4:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .about-pictures {
+        display: flex;
+        flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si nécessaire */
+        justify-content: center; /* Centre les images */
+        gap: 10px; /* Ajoute un espace entre les images */
+        margin: 0; /* Supprime les marges */
+    }
+
+    .about-pictures > div {
+        flex: 1 1 calc(50% - 10px); /* Chaque image occupe 50% de la largeur, moins l'espace entre */
+        max-width: calc(50% - 10px); /* Empêche de dépasser 50% */
+        height: auto; /* Maintient les proportions */
+        border-radius: 10px; /* Ajoute des coins arrondis */
+        overflow: hidden; /* Empêche tout dépassement */
+    }
+
+    .about-pictures img {
+        display: block; /* Assure un affichage en bloc */
+        width: 100%; /* Ajuste l'image à la largeur du conteneur */
+        height: auto; /* Maintient les proportions */
+        border-radius: 10px; /* Coins arrondis pour l'image */
+    }
+
+    .zion-picture {
+        transform: rotate(350deg);
+    }
+    .prague-picture,
+    .mountain-picture {
+        display: none; /* Toujours cachées sur mobile */
+    }
+
+    .about-sections {
+        gap: 20px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 5px
+    }
+
+    .section-title h2 {
+        margin-bottom: 0;
+    }
+
+    .connect {
+        flex-direction: column;
+        gap : 5px
+    }
+
 }
 
 /*--------------------BLOG--------------------*/
@@ -411,6 +474,9 @@ h2 {
     max-width: 700px;
     display: flex;
     justify-content: center;
+
+
+
     padding: 64px 24px;
     flex-direction: column;
     margin-left: auto;
@@ -454,6 +520,12 @@ h2 {
     margin: 0;
 }
 
+@media screen and (max-width: 500px) {
+    .gear-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 /*--------------------HOSTING--------------------*/
 
@@ -471,6 +543,7 @@ h2 {
     max-width: 100%;
     border-radius: 15px;
 }
+
 
 pre code {
     font-size: 13px;
