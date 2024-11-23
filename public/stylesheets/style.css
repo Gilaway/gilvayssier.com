@@ -69,66 +69,6 @@ p {
 
 /*--------------------INDEX--------------------*/
 
-@media screen and (max-width: 500px) {
-    .homepage-body {
-        max-width: 90%;
-    }
-
-    .project-carousel {
-        display: flex;
-        overflow-x: auto; /* Activer le défilement horizontal */
-        scroll-snap-type: x mandatory; /* Activer le snapping */
-        gap: 10px; /* Espace entre les éléments */
-        scrollbar-width: none; /* Masquer la scrollbar sur Firefox */
-    }
-
-    .project-carousel::-webkit-scrollbar {
-        display: none; /* Masquer la scrollbar sur WebKit */
-    }
-
-    .project-list {
-        flex: 0 0 100%; /* Chaque élément prend 100% de la largeur de l'écran */
-        scroll-snap-align: center; /* Alignement au centre lors du snapping */
-    }
-
-    .project-img {
-        border: 1px solid #F0F0F0;
-        height: 10rem;
-        background-color: #F0F0F0;
-        border-radius: 10px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .project-img img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    .project-link {
-        text-align: center;
-        padding: 10px;
-    }
-
-    /* Optionnel : Styles pour les titres et descriptions */
-    .project-list h3 {
-        font-size: 1.2rem;
-        margin: 10px 0 5px;
-    }
-
-    .project-list p {
-        font-size: 0.9rem;
-        color: #7D858C;
-    }
-
-    .article a {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 .homepage-body {
     max-width: 700px;
     display: flex;
@@ -392,58 +332,6 @@ h2 {
     cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
-    .about-pictures {
-        display: flex;
-        flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si nécessaire */
-        justify-content: center; /* Centre les images */
-        gap: 10px; /* Ajoute un espace entre les images */
-        margin: 0; /* Supprime les marges */
-    }
-
-    .about-pictures > div {
-        flex: 1 1 calc(50% - 10px); /* Chaque image occupe 50% de la largeur, moins l'espace entre */
-        max-width: calc(50% - 10px); /* Empêche de dépasser 50% */
-        height: auto; /* Maintient les proportions */
-        border-radius: 10px; /* Ajoute des coins arrondis */
-        overflow: hidden; /* Empêche tout dépassement */
-    }
-
-    .about-pictures img {
-        display: block; /* Assure un affichage en bloc */
-        width: 100%; /* Ajuste l'image à la largeur du conteneur */
-        height: auto; /* Maintient les proportions */
-        border-radius: 10px; /* Coins arrondis pour l'image */
-    }
-
-    .zion-picture {
-        transform: rotate(350deg);
-    }
-    .prague-picture,
-    .mountain-picture {
-        display: none; /* Toujours cachées sur mobile */
-    }
-
-    .about-sections {
-        gap: 20px;
-    }
-
-    .about {
-        flex-direction: column;
-        gap: 5px
-    }
-
-    .section-title h2 {
-        margin-bottom: 0;
-    }
-
-    .connect {
-        flex-direction: column;
-        gap : 5px
-    }
-
-}
-
 /*--------------------BLOG--------------------*/
 
 .blog-body {
@@ -520,13 +408,6 @@ h2 {
     margin: 0;
 }
 
-@media screen and (max-width: 500px) {
-    .gear-list {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-
 /*--------------------HOSTING--------------------*/
 
 .hosting-body {
@@ -595,7 +476,6 @@ code {
     font-weight: bolder;
 }
 
-
 /*--------------------404--------------------*/
 
 .e-404-body {
@@ -612,6 +492,123 @@ code {
 }
 
 /*--------------------MOBILE--------------------*/
+/*--------------------INDEX---------------------*/
+
+@media screen and (max-width: 500px) {
+    .homepage-body {
+        max-width: 90%;
+    }
+
+    .project-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+        scrollbar-width: none;
+    }
+
+    .project-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-list {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+    }
+
+    .project-img {
+        border: 1px solid #F0F0F0;
+        height: 10rem;
+        background-color: #F0F0F0;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-img img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .project-link {
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Optionnel : Styles pour les titres et descriptions */
+    .project-list h3 {
+        font-size: 1.2rem;
+        margin: 10px 0 5px;
+    }
+
+    .project-list p {
+        font-size: 0.9rem;
+        color: #7D858C;
+    }
+
+    .article a {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*--------------------ABOUT---------------------*/
+
+@media screen and (max-width: 500px) {
+    .about-pictures {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .about-pictures > div {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+        height: auto;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .about-pictures img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .zion-picture {
+        transform: rotate(350deg);
+    }
+    .prague-picture,
+    .mountain-picture {
+        display: none;
+    }
+
+    .about-sections {
+        gap: 20px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 5px
+    }
+
+    .section-title h2 {
+        margin-bottom: 0;
+    }
+
+    .connect {
+        flex-direction: column;
+        gap : 5px
+    }
+
+}
+/*--------------------BLOG---------------------*/
+
 
 @media screen and (max-width: 500px) {
     .article a {
@@ -622,5 +619,21 @@ code {
 
     .article-link p {
         margin: 6px 0;
+    }
+}
+
+/*--------------------GEAR---------------------*/
+
+@media screen and (max-width: 500px) {
+    .gear-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*--------------------OOP---------------------*/
+
+@media screen and (max-width: 500px) {
+    code {
+        font-size: 1rem;
     }
 }
